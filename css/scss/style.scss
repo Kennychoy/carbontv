@@ -1,0 +1,3600 @@
+@font-face {
+	font-family: "SabonLTStd_Italic";
+	src: url(../fonts/SabonLTStd_Italic.ttf)
+}
+
+/* reset browser styles */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+ol { 
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+*, *:before, *:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+/* end reset browser styles */
+
+@media screen and (min-width: 1200px) {
+
+	/* beginning of header (nav) */
+	.navbar-header {
+		margin-left: 40px !important;
+		margin-top: -5px;
+		span {
+			width: 80px;
+			height: 80px;				
+			a {
+				color: white;
+				font-size: 3em;	
+				position: relative;
+				overflow: visible; 
+				margin-top: 45px;
+				opacity: 1;
+				transition: opacity 0.5s;
+				-o-transition: opacity 0.5s;
+				-moz-transition: opacity 0.5s;
+				-webkit-transition: opacity 0.5s;
+				&:hover {
+					opacity: 0.5;
+				}
+				&:before {
+					content: "";
+					background: url("../images/hexagon.png") no-repeat;
+					background-size: 100% 100%;
+					position: absolute;
+					left: -10px;
+					top: -15px;
+					width: 80px;
+					height: 80px;
+					transform: rotate(30deg);
+					-o-transform: rotate(30deg);
+					-moz-transform: rotate(30deg);
+					-webkit-transform: rotate(30deg);
+				}
+			}
+		}
+	}
+	.navbar-right {
+		margin-right: -50px;
+		margin-top: 60px !important;
+		width: 100px;
+		height: 80px;
+		&:hover {
+			cursor: pointer;
+			#menu-btn {
+				&:before {
+					transform: translateY(450%);
+				}
+				&:after {
+					transform: translateY(-450%);
+				}
+			}
+		}
+		#menu-btn {
+			width: 24px;
+			height: 2px;
+			background: white;
+			position: absolute;				
+			&:before {
+				content: "";
+				width: 24px;
+				height: 2px;
+				background: white;
+				position: absolute;
+				transform: translateY(300%);
+				-o-transform: translateY(300%);
+				-ms-transform: translateY(300%);
+				-moz-box-sizing-transform: translateY(300%);
+				-webkit-transform: translateY(300%);
+				transition: transform .3s;
+				-o-transition: transform .3s;
+				-ms-transition: transform .3s;
+				-moz-transition: transform .3s;
+				-webkit-transition: transform .3s;					
+			}
+			&:after {
+				content: "";
+				width: 24px;
+				height: 2px;
+				background: white;
+				position: absolute;
+				transform: translateY(-300%);
+				-o-transform: translateY(-300%);
+				-ms-transform: translateY(-300%);
+				-moz-box-sizing-transform: translateY(-300%);
+				-webkit-transform: translateY(-300%);
+				transition: transform .3s;
+				-o-transition: transform .3s;
+				-ms-transition: transform .3s;
+				-moz-transition: transform .3s;
+				-webkit-transition: transform .3s;
+			}
+		}
+		.closePage {
+			background: transparent !important;
+			&:before {
+				transform: rotate(45deg)!important;
+				-o-transform: rotate(45deg)!important;
+				-ms-transform: rotate(45deg)!important;
+				-moz-transform: rotate(45deg)!important;
+				-webkit-transform: rotate(45deg)!important;
+			};
+			&:after {
+				transform: rotate(-45deg)!important;
+				-o-transform: rotate(-45deg)!important;
+				-ms-transform: rotate(-45deg)!important;
+				-moz-transform: rotate(-45deg)!important;
+				-webkit-transform: rotate(-45deg)!important;
+			};
+		}
+	}
+	/* end of header (nav) */
+
+	/* beginning of home video */
+	#top-video {
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		max-width: 100%;	
+		left: 0;
+		top: 0;
+		bottom: 0;	
+		#home-video {
+			background: transparent;
+			position: absolute;
+			padding: 0 !important;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			overflow: hidden;
+			z-index: -100;
+			width: 100%; 
+			height: 100vh;
+			max-height: 100%;
+			video {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				min-width: 100%;
+				min-height: 100%;
+				width: auto;
+				height: auto;
+				z-index: -100;
+				transform: translateX(-50%) translateY(-50%);
+			}
+		}
+		
+		#tagline {
+			font: 4.5em bold;
+			font-family: "SabonLTStd_Italic";
+			position: absolute;
+			color: white;
+			left: 60px;
+			bottom: 100px;
+			span {
+				text-decoration: underline;
+			}
+		}
+		
+		#down-arrow {
+			span {
+				color: white;
+				font-size: 3em;
+				position: absolute;
+				left: 48%;
+				top: 93%;
+				transition: font-size 0.5s;
+				&:hover {
+					font-size: 3.5em;
+				}
+			}
+		}
+	}
+	/* end of home video*/
+	
+	/*Drop Down Page*/
+	#dropDownPage {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 3;
+		left: 0;
+		top: 0;
+		background: url("../images/dropdown.jpg") center center no-repeat;
+		background-attachment: cover;
+		display: none; 
+		overflow-y: auto;
+		#menu-inner {	
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			width: 95%;
+			nav {
+				/* margin-top: 240px; */
+				padding: 28.5714px 0;
+				ul {
+					width: 90%;
+					margin: 0 auto;
+					text-align: center;
+					li {
+						display: inline;
+						padding: 0 12px;
+						&:first-child, &:last-child {
+							font-family: "Lobster";
+						}
+						a {
+							font-size: 48px;
+							font-weight: bold;
+							color: white;
+							text-shadow: .5px .5px grey;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+		#social-links {
+			position: absolute;
+			left: 50%;
+			top: 65%;
+			transform: translate(-50%, -35%);
+			-o-transform: translate(-50%, -35%);
+			-ms-transform: translate(-50%, -35%);
+			-moz-transform: translate(-50%, -35%);
+			-webkit-transform: translate(-50%, -35%);
+			width: 95%;
+			ul {
+				width: 99%;
+				padding: 0;
+				margin: 0 auto;
+				text-align: center;
+				margin-top: 140px;
+				li {
+					display: inline-block;
+					margin: 0 12px;
+					a {
+						img {
+							width: 27px;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* who we are */
+	#who-we-are {		
+		width: 100vw;
+		display: block;		
+		max-width: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/We1.jpg") no-repeat center center;
+		background-size: cover;
+		.container {
+			padding-top: 162.857px;
+			padding-bottom: 157.143px;
+			color: white;
+			//width: 970px;
+			h1 {
+				font-size: 3em;
+				margin-bottom: 40px;
+				font-family: "SabonLTStd_Italic";
+				font-weight: bold;
+			}
+			p {
+				font-size: 1.3em;
+				font-family: "Roboto";
+				letter-spacing: 0.2rem;
+				font-weight: 700;
+				word-wrap: break-word;
+			}
+		}
+	}
+	
+	/* information */
+	
+	#information {	
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		max-width: 100%;
+		.container-fluid {
+			padding: 0 !important;
+			.row {
+				height: 50vh;
+				width: 100vw;
+				max-width: 100%;
+				margin: 0 !important;
+				.col-xs-12 {
+					height: 100%;
+					color: white; 
+					font-size: 3em;
+					padding: 0 !important;
+					font-family: "Bad Script";
+					font-weight: 900;
+					a {
+						color: white;
+					}
+					&:first-child {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Branding.jpg") no-repeat center center;
+						background-size: cover;
+						font-family: "Roboto";
+					}
+					&:nth-child(2) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Motion.jpg") no-repeat center center;
+						background-size: cover;
+					}
+					&:nth-child(3) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Corporate.jpg") no-repeat center center;
+						background-size: cover;
+					}
+					&:nth-child(4) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/LiveAction.jpg") no-repeat center center;
+						background-size: cover;
+						font-family: "Roboto";
+						float: right;
+					}
+					&:last-child {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Here.jpg") no-repeat center center;
+						background-size: cover;						
+					}
+					.info-content {
+						position: relative;
+						width: 100%; 
+						height: 100%;
+						&:hover {
+							background-color: rgba(0, 0, 0, 0.5);
+							cursor: pointer;
+							p:after {
+								width: 100%;
+								border-bottom: 2px solid white;
+							}
+						}
+						p {
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+							-o-transform: translate(-50%, -50%);
+							-moz-transform: translate(-50%, -50%);
+							-webkit-transform: translate(-50%, -50%);
+							&:after {
+								content: "";
+								position: absolute;
+								width: 0;
+								height: 1px;
+								left: 0;
+								bottom: 0;
+								border-bottom: 0px solid white;
+								transition: border-bottom .3s, width .3s;
+								-o-transition: border-bottom .3s, width .3s;
+								-moz-transition: border-bottom .3s, width .3s;
+								-webkit-transition: border-bottom .3s, width .3s;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* Our Clients */
+	#our-clients {
+		display: block;
+		width: 100%;
+		background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Motion.jpg") no-repeat center center;
+		background-size: cover;	
+		#our-clients-wrapper {
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			.container {
+				padding: 200px 15px 200px 0px;
+				color: white;				
+				.row {
+					padding: 0 !important;
+					h1 {
+						font-size: 3.5em;
+						margin-left: 8%;
+						margin-bottom: 40px;
+						font-family: "Lobster";
+						span {
+							text-decoration: underline;
+						}
+					}
+				}
+				.brand-img-wrapper {
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+	#where-we-live {
+		width: 100vw;
+		max-width: 100%;
+		min-height: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/Where1.jpg") no-repeat center center;
+		background-size: cover;
+		display: block;
+		.container {
+			padding: 180px 15px 180px 120px;
+			color: white;	
+			h1 {
+				font-family: "Lobster";
+				font-size: 42px;
+				line-height: 54px;
+				letter-spacing: 1px;
+			}
+			h2 {
+				font-size: 28px;
+				line-height: 40px;
+				font-weight: bold;
+			}
+			P {
+				font-family: "Open Sans";
+				font-weight: bold;
+				font-size: 1.1em;
+				letter-spacing: 0.3px;
+				span {
+					color: grey;
+					&:hover {
+						text-decoration: underline;
+						cursor: pointer;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	
+	#to-be {
+		display: block;
+		width: 100vw;
+		max-width: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/ToBe1.jpg") no-repeat center center;
+		background-size: cover;
+		color: white;
+		.container {
+			padding-top: 180px;
+			padding-bottom: 180px;
+			padding-left: 120px !important;
+			h1 {
+				font-family: "Lobster";
+				font-size: 3.5em;
+			}
+			h2 {
+				padding-left: 65px;
+				font-size: 2em;
+				font-weight: bold;
+			}
+			p {
+				padding-left: 65px;
+				font-size: 1em;
+				font-weight: bold;
+				letter-spacing: 1.3px;
+				span {
+					&:hover {
+						text-decoration: underline;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+	
+	/* Back to top */
+	#back-top {
+		color: white;
+		position: fixed;
+		right: 50px;
+		bottom: 50px;
+		font-size: 2em;
+		transition: font-size 0.3s;
+		&:hover {
+			font-size: 2.5em;
+			cursor: pointer;
+		}
+	}
+	
+	/* Production video */
+	.production-vdo {
+		height: 0;
+		padding-top: 25px;
+		padding-bottom: 55%;
+		margin-bottom: 10px;
+		position: relative;
+		overflow: hidden;
+		iframe {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+	}
+	
+	.vdo-description {
+		width: 100%;
+		background: black;
+		color: white;
+		padding: 70px 0 80px 0;
+		margin-top: -30px;
+		h1 {
+			border-bottom: 2px solid white;
+			font-family: "SabonLTStd_Italic";
+			display: inline;
+			font-weight: 700;
+		}
+		h2 {
+			font-size: 2em;
+			padding-bottom: 10px;
+		}
+		p {
+			width: 90%;
+			margin: 0 auto;
+			letter-spacing: 0.1rem;
+			font-size: 1.3em;
+		}
+	}
+	
+	.sub-vdo {
+		background: black;
+		.container-fluid {
+			padding: 0;
+			.rows {
+				.col-xs-12 {
+					padding-left: 0;
+					padding-right: 0;
+					height: auto;
+					padding-top: 25px;
+					padding-bottom: 25%;
+					margin-bottom: 10px;
+					position: relative;
+					overflow: hidden;
+					iframe {
+						top: -20%;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+	
+	.vdo-screenshots {
+		.container-fluid {
+			padding: 0 !important;
+			.rows {
+				.col-xs-12 {
+					padding: 0 !important;
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+	footer {
+		color: white;
+		margin-top: -10px;
+		.container-fluid {
+			background: black;
+			.client-name {
+				.col-xs-12 {
+					padding-top: 40px;
+					p {
+						font-size: 1.3em;
+						font-family: "SabonLTStd_Italic";
+						letter-spacing: 1px;
+					}
+				}
+			}
+			
+			.site-links {
+				.col-xs-12 {
+					padding-top: 60px;
+					font-family: "SabonLTStd_Italic";
+					letter-spacing: 0.1rem;
+					&:not(:nth-child(2)) {
+						font-family: "Roboto";
+						font-weight: 700;
+					}
+					p {
+						font-size: 16px;
+						line-height: 18px;
+						padding-bottom: 1%;						
+						&:nth-child(2) {
+							font-family: "SabonLTStd_Italic";
+						}
+						a {
+							color: white;
+							border-bottom: 2px solid white;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			
+			.footer-social-links {
+				.col-xs-12 {
+					padding-top: 96px;
+					padding-bottom: 126px;
+					p {}
+					div {
+						a {
+							color: white;
+							transition: color .5s;
+							&:first-child:hover {color: #1573dd;}
+							&:nth-child(2):hover {color: #0084b4;}
+							&:last-child:hover {color: red;}
+							i {
+								padding-left: 1%;
+								padding-right: 1%;			
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	/* end of production videos*/
+	
+	/* Categories' pages */
+	.cat-wrapper {
+		background: black;
+		height: 100vh;
+		.container-fluid {
+			padding: 0 !important;
+			.rows {
+				.cat-vdo-wrapper {
+					padding: 0 !important;
+					&:hover {
+						img {
+							z-index: -1;
+						}
+						.vdo-hover-text {
+							z-index: 1;
+							background: rgba(0, 0, 0, 0.6);
+						}
+					}
+					img {}
+					a {
+						.vdo-hover-text {
+							position: absolute;
+							color: white;
+							width: 100%;
+							height: 100%;
+							left: 0;
+							top: 0;
+							background: transparent;
+							transition: background 2s;
+							-o-transition: background 2s;
+							-ms-transition: background 2s;
+							-moz-transition: background 2s;
+							-webkit-transition: background 2s;
+							z-index: -1;
+							.vdo-hover-text-inner {
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								-o-transform: translate(-50%, -50%);
+								-ms-transform: translate(-50%, -50%);
+								-moz-transform: translate(-50%, -50%);
+								-webkit-transform: translate(-50%, -50%);
+								h4 {
+									font-family: "Roboto";
+									font-size: 2.2em;
+									font-weight: bold;
+									border-bottom: 2px solid white;
+								}
+								h5 {
+									font-family: "Lobster";
+									font-size: 1.2em;
+								}
+							}
+						
+						}
+					}					
+				}
+			}
+		}
+	}
+	/* End of Categories' pages (min: 1200)*/
+}
+
+/* beginning of md size */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+	/* beginning of header (nav) */
+	.navbar-header {
+		margin-left: 40px !important;
+		margin-top: -5px;
+		span {
+			width: 80px;
+			height: 80px;				
+			a {
+				color: white;
+				font-size: 3em;	
+				position: relative;
+				overflow: visible; 
+				margin-top: 45px;
+				opacity: 1;
+				transition: opacity 0.5s;
+				-o-transition: opacity 0.5s;
+				-moz-transition: opacity 0.5s;
+				-webkit-transition: opacity 0.5s;
+				&:hover {
+					opacity: 0.5;
+				}
+				&:before {
+					content: "";
+					background: url("../images/hexagon.png") no-repeat;
+					background-size: 100% 100%;
+					position: absolute;
+					left: -10px;
+					top: -15px;
+					width: 80px;
+					height: 80px;
+					transform: rotate(30deg);
+					-o-transform: rotate(30deg);
+					-moz-transform: rotate(30deg);
+					-webkit-transform: rotate(30deg);
+				}
+			}
+		}
+	}
+		.navbar-right {
+		margin-right: -50px;
+		margin-top: 60px !important;
+		width: 100px;
+		height: 80px;
+		&:hover {
+			cursor: pointer;
+			#menu-btn {
+				&:before {
+					transform: translateY(450%);
+				}
+				&:after {
+					transform: translateY(-450%);
+				}
+			}
+		}
+		#menu-btn {
+			width: 24px;
+			height: 2px;
+			background: white;
+			position: absolute;				
+			&:before {
+				content: "";
+				width: 24px;
+				height: 2px;
+				background: white;
+				position: absolute;
+				transform: translateY(300%);
+				-o-transform: translateY(300%);
+				-ms-transform: translateY(300%);
+				-moz-box-sizing-transform: translateY(300%);
+				-webkit-transform: translateY(300%);
+				transition: transform .3s;
+				-o-transition: transform .3s;
+				-ms-transition: transform .3s;
+				-moz-transition: transform .3s;
+				-webkit-transition: transform .3s;					
+			}
+			&:after {
+				content: "";
+				width: 24px;
+				height: 2px;
+				background: white;
+				position: absolute;
+				transform: translateY(-300%);
+				-o-transform: translateY(-300%);
+				-ms-transform: translateY(-300%);
+				-moz-box-sizing-transform: translateY(-300%);
+				-webkit-transform: translateY(-300%);
+				transition: transform .3s;
+				-o-transition: transform .3s;
+				-ms-transition: transform .3s;
+				-moz-transition: transform .3s;
+				-webkit-transition: transform .3s;
+			}
+		}
+		.closePage {
+			background: transparent !important;
+			&:before {
+				transform: rotate(45deg)!important;
+				-o-transform: rotate(45deg)!important;
+				-ms-transform: rotate(45deg)!important;
+				-moz-transform: rotate(45deg)!important;
+				-webkit-transform: rotate(45deg)!important;
+			};
+			&:after {
+				transform: rotate(-45deg)!important;
+				-o-transform: rotate(-45deg)!important;
+				-ms-transform: rotate(-45deg)!important;
+				-moz-transform: rotate(-45deg)!important;
+				-webkit-transform: rotate(-45deg)!important;
+			};
+		}
+	}
+	/* end of header (nav) */
+	
+	#top-video {
+		display: block;
+		width: 100vw;
+		height: 100vh;max-width: 100%;	
+		left: 0;
+		top: 0;
+		bottom: 0;
+
+	
+		#home-video {
+			background: transparent;
+			position: absolute;
+			padding: 0 !important;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			overflow: hidden;
+			z-index: -100;
+			width: 100%; 
+			height: 100vh;
+			max-height: 100%;
+			video {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				min-width: 100%;
+				min-height: 100%;
+				width: auto;
+				height: auto;
+				z-index: -100;
+				transform: translateX(-50%) translateY(-50%);
+			}
+		}
+		
+		#tagline {
+			font: 4.5em bold;
+			font-family: "SabonLTStd_Italic";
+			position: absolute;
+			color: white;
+			left: 60px;
+			bottom: 100px;
+			span {
+				text-decoration: underline;
+			}
+		}
+		
+		#down-arrow {
+			span {
+				color: white;
+				font-size: 3em;
+				position: absolute;
+				left: 48%;
+				top: 93%;
+				transition: font-size 0.5s;
+				&:hover {
+					font-size: 3.5em;
+				}
+			}
+		}
+	}
+	
+	/*Drop Down Page*/
+	#dropDownPage {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 3;
+		left: 0;
+		top: 0;
+		background: url("../images/dropdown.jpg") center center no-repeat;
+		background-attachment: cover;
+		display: none; 
+		overflow-y: auto;
+		#menu-inner {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			width: 95%;
+			nav {
+				/* margin-top: 240px; */
+				padding: 28.5714px 0;
+				ul {
+					width: 90%;
+					margin: 0 auto;
+					text-align: center;
+					li {
+						display: inline;
+						padding: 0 12px;
+						&:first-child, &:last-child {
+							font-family: "Lobster";
+						}
+						a {
+							font-size: 48px;
+							font-weight: bold;
+							color: white;
+							text-shadow: .5px .5px grey;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+		#social-links {
+			position: absolute;
+			left: 50%;
+			top: 65%;
+			transform: translate(-50%, -35%);
+			-o-transform: translate(-50%, -35%);
+			-ms-transform: translate(-50%, -35%);
+			-moz-transform: translate(-50%, -35%);
+			-webkit-transform: translate(-50%, -35%);
+			width: 95%;
+			ul {
+				width: 99%;
+				padding: 0;
+				margin: 0 auto;
+				text-align: center;
+				margin-top: 140px;
+				li {
+					display: inline-block;
+					margin: 0 12px;
+					a {
+						img {
+							width: 27px;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* who we are */
+	#who-we-are {		
+		width: 100vw;
+		display: block;		
+		max-width: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/We1.jpg") no-repeat center center;
+		background-size: cover;
+		.container {
+			padding-top: 162.857px;
+			padding-bottom: 157.143px;
+			color: white;
+			width: 80%;
+			h1 {
+				font-size: 3em;
+				margin-bottom: 40px;
+				font-family: "SabonLTStd_Italic";
+				font-weight: bold;
+			}
+			p {
+				font-size: 1.25em;
+				font-family: "Roboto";
+				letter-spacing: 0.1rem;
+				font-weight: 700;
+				word-wrap: break-word;
+				line-height: 170%;
+			}
+		}
+	}
+	
+	/* information */
+	
+	#information {	
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		max-width: 100%;
+		.container-fluid {
+			padding: 0 !important;
+			.row {
+				height: 50vh;
+				width: 100vw;
+				max-width: 100%;
+				margin: 0 !important;
+				.col-xs-12 {
+					height: 100%;
+					color: white; 
+					font-size: 3em;
+					padding: 0 !important;
+					font-family: "Bad Script";
+					font-weight: 900;
+					a {
+						color: white;
+					}
+					&:first-child {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Branding.jpg") no-repeat center center;
+						background-size: cover;
+						font-family: "Roboto";
+					}
+					&:nth-child(2) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Motion.jpg") no-repeat center center;
+						background-size: cover;
+					}
+					&:nth-child(3) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Corporate.jpg") no-repeat center center;
+						background-size: cover;
+					}
+					&:nth-child(4) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/LiveAction.jpg") no-repeat center center;
+						background-size: cover;
+						font-family: "Roboto";
+						float: right;
+					}
+					&:last-child {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Here.jpg") no-repeat center center;
+						background-size: cover;						
+					}
+					.info-content {
+						position: relative;
+						width: 100%; 
+						height: 100%;
+						&:hover {
+							background-color: rgba(0, 0, 0, 0.5);
+							cursor: pointer;
+							p:after {
+								width: 100%;
+								border-bottom: 2px solid white;
+							}
+						}
+						p {
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+							-o-transform: translate(-50%, -50%);
+							-moz-transform: translate(-50%, -50%);
+							-webkit-transform: translate(-50%, -50%);
+							&:after {
+								content: "";
+								position: absolute;
+								width: 0;
+								height: 1px;
+								left: 0;
+								bottom: 0;
+								border-bottom: 0px solid white;
+								transition: border-bottom .3s, width .3s;
+								-o-transition: border-bottom .3s, width .3s;
+								-moz-transition: border-bottom .3s, width .3s;
+								-webkit-transition: border-bottom .3s, width .3s;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* Our Clients */
+	#our-clients {
+		display: block;
+		width: 100%;
+		background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Motion.jpg") no-repeat center center;
+		background-size: cover;	
+		#our-clients-wrapper {
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			.container {
+				padding: 200px 15px 200px 0px;
+				color: white;				
+				.row {
+					padding: 0 !important;
+					h1 {
+						font-size: 3.5em;
+						margin-left: 8%;
+						margin-bottom: 40px;
+						font-family: "Lobster";
+						span {
+							text-decoration: underline;
+						}
+					}
+				}
+				.brand-img-wrapper {
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+	#where-we-live {
+		width: 100vw;
+		max-width: 100%;
+		min-height: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/Where1.jpg") no-repeat center center;
+		background-size: cover;
+		display: block;
+		.container {
+			padding: 180px 15px 180px 120px;
+			color: white;	
+			h1 {
+				font-family: "Lobster";
+			}
+			P {
+				font-family: "Open Sans";
+				font-weight: 900;
+				span {
+					color: grey;
+					&:hover {
+						text-decoration: underline;
+						cursor: pointer;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	
+	#to-be {
+		display: block;
+		width: 100vw;
+		max-width: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/ToBe1.jpg") no-repeat center center;
+		background-size: cover;
+		color: white;
+		.container {
+			padding-top: 180px;
+			padding-bottom: 180px;
+			padding-left: 120px !important;
+			h1 {
+				font-family: "Lobster";
+				font-size: 3.5em;
+			}
+			h2 {
+				padding-left: 65px;
+				font-size: 2em;
+				font-weight: bold;
+			}
+			p {
+				padding-left: 65px;
+				font-size: 1.2em;
+				font-weight: bold;
+				span {
+					&:hover {
+						text-decoration: underline;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+	
+	/* Back to top */
+	#back-top {
+		color: white;
+		position: fixed;
+		right: 50px;
+		bottom: 50px;
+		font-size: 2em;
+		transition: font-size 0.3s;
+		&:hover {
+			font-size: 2.5em;
+			cursor: pointer;
+		}
+	}
+	
+	/* Production video */
+	.production-vdo {
+		height: 0;
+		padding-top: 25px;
+		padding-bottom: 54%;
+		margin-bottom: 10px;
+		position: relative;
+		overflow: hidden;
+		iframe {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+	}
+	
+	.vdo-description {
+		width: 100%;
+		background: black;
+		color: white;
+		padding: 70px 0 65px 0;
+		margin-top: -30px;
+		h1 {
+			border-bottom: 2px solid white;
+			font-family: "SabonLTStd_Italic";
+			display: inline;
+			font-weight: 700;
+			font-size: 33px;
+			line-height: 45px;
+		}
+		h2 {
+			font-size: 2em;
+			padding-bottom: 10px;
+			line-height: 34px;
+		}
+		p {
+			width: 90%;
+			margin: 0 auto;
+			letter-spacing: 0.1rem;
+			font-size: 1.2em;
+		}
+	}
+	
+	.sub-vdo {
+		background: black;
+		.container-fluid {
+			padding: 0;
+			.rows {
+				.col-xs-12 {
+					padding-left: 0;
+					padding-right: 0;
+					height: auto;
+					padding-top: 25px;
+					padding-bottom: 25%;
+					margin-bottom: 10px;
+					position: relative;
+					overflow: hidden;
+					iframe {
+						top: -20%;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+	
+	.vdo-screenshots {
+		.container-fluid {
+			padding: 0 !important;
+			.rows {
+				.col-xs-12 {
+					padding: 0 !important;
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+	footer {
+		color: white;
+		margin-top: -10px;
+		.container-fluid {
+			background: black;
+			.client-name {
+				.col-xs-12 {
+					padding-top: 40px;
+					p {
+						font-size: 1.3em;
+						font-family: "SabonLTStd_Italic";
+						letter-spacing: 1px;
+					}
+				}
+			}
+			
+			.site-links {
+				.col-xs-12 {
+					padding-top: 60px;
+					font-family: "SabonLTStd_Italic";
+					letter-spacing: 0.1rem;
+					&:not(:nth-child(2)) {
+						font-family: "Roboto";
+						font-weight: 700;
+					}
+					p {
+						font-size: 16px;
+						line-height: 18px;
+						padding-bottom: 1%;						
+						&:nth-child(2) {
+							font-family: "SabonLTStd_Italic";
+						}
+						a {
+							color: white;
+							border-bottom: 2px solid white;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			
+			.footer-social-links {
+				.col-xs-12 {
+					padding-top: 96px;
+					padding-bottom: 126px;
+					p {}
+					div {
+						a {
+							color: white;
+							transition: color .5s;
+							&:first-child:hover {color: #1573dd;}
+							&:nth-child(2):hover {color: #0084b4;}
+							&:last-child:hover {color: red;}
+							i {
+								padding-left: 1%;
+								padding-right: 1%;			
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	/* end of production videos*/
+	
+	/* Categories' pages */
+	.cat-wrapper {
+		background: black;
+		height: 100vh;
+		.container-fluid {
+			padding: 0 !important;
+			.rows {
+				.cat-vdo-wrapper {
+					padding: 0 !important;
+					&:hover {
+						img {
+							z-index: -1;
+						}
+						.vdo-hover-text {
+							z-index: 1;
+							background: rgba(0, 0, 0, 0.6);
+						}
+					}
+					img {}
+					a {
+						.vdo-hover-text {
+							position: absolute;
+							color: white;
+							width: 100%;
+							height: 100%;
+							left: 0;
+							top: 0;
+							background: transparent;
+							transition: background 2s;
+							-o-transition: background 2s;
+							-ms-transition: background 2s;
+							-moz-transition: background 2s;
+							-webkit-transition: background 2s;
+							z-index: -1;
+							.vdo-hover-text-inner {
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								-o-transform: translate(-50%, -50%);
+								-ms-transform: translate(-50%, -50%);
+								-moz-transform: translate(-50%, -50%);
+								-webkit-transform: translate(-50%, -50%);
+								h4 {
+									font-family: "Roboto";
+									font-size: 2em;
+									font-weight: bold;
+									border-bottom: 2px solid white;
+								}
+								h5 {
+									font-family: "Lobster";
+									font-size: 1em;
+								}
+							}
+						
+						}
+					}					
+				}
+			}
+		}
+	}
+	/* End of Categories' pages (992-1200)*/
+}
+
+// small screen //
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+	/* beginning of header (nav) */
+
+	.navbar-header {
+		margin-left: 40px !important;
+		margin-top: -5px;
+		span {
+			width: 80px;
+			height: 80px;				
+			a {
+				color: white;
+				font-size: 3em;	
+				position: relative;
+				overflow: visible; 
+				margin-top: 45px;
+				opacity: 1;
+				transition: opacity 0.5s;
+				-o-transition: opacity 0.5s;
+				-moz-transition: opacity 0.5s;
+				-webkit-transition: opacity 0.5s;
+				&:hover {
+					opacity: 0.5;
+				}
+				&:before {
+					content: "";
+					background: url("../images/hexagon.png") no-repeat;
+					background-size: 100% 100%;
+					position: absolute;
+					left: -10px;
+					top: -15px;
+					width: 80px;
+					height: 80px;
+					transform: rotate(30deg);
+					-o-transform: rotate(30deg);
+					-moz-transform: rotate(30deg);
+					-webkit-transform: rotate(30deg);
+				}
+			}
+		}
+	}
+	.navbar-right {
+		margin-right: -50px;
+		margin-top: 60px !important;
+		width: 100px;
+		height: 80px;
+		&:hover {
+			cursor: pointer;
+			#menu-btn {
+				&:before {
+					transform: translateY(450%);
+				}
+				&:after {
+					transform: translateY(-450%);
+				}
+			}
+		}
+		#menu-btn {
+			width: 24px;
+			height: 2px;
+			background: white;
+			position: absolute;				
+			&:before {
+				content: "";
+				width: 24px;
+				height: 2px;
+				background: white;
+				position: absolute;
+				transform: translateY(300%);
+				-o-transform: translateY(300%);
+				-ms-transform: translateY(300%);
+				-moz-box-sizing-transform: translateY(300%);
+				-webkit-transform: translateY(300%);
+				transition: transform .3s;
+				-o-transition: transform .3s;
+				-ms-transition: transform .3s;
+				-moz-transition: transform .3s;
+				-webkit-transition: transform .3s;					
+			}
+			&:after {
+				content: "";
+				width: 24px;
+				height: 2px;
+				background: white;
+				position: absolute;
+				transform: translateY(-300%);
+				-o-transform: translateY(-300%);
+				-ms-transform: translateY(-300%);
+				-moz-box-sizing-transform: translateY(-300%);
+				-webkit-transform: translateY(-300%);
+				transition: transform .3s;
+				-o-transition: transform .3s;
+				-ms-transition: transform .3s;
+				-moz-transition: transform .3s;
+				-webkit-transition: transform .3s;
+			}
+		}
+		.closePage {
+			background: transparent !important;
+			&:before {
+				transform: rotate(45deg)!important;
+				-o-transform: rotate(45deg)!important;
+				-ms-transform: rotate(45deg)!important;
+				-moz-transform: rotate(45deg)!important;
+				-webkit-transform: rotate(45deg)!important;
+			};
+			&:after {
+				transform: rotate(-45deg)!important;
+				-o-transform: rotate(-45deg)!important;
+				-ms-transform: rotate(-45deg)!important;
+				-moz-transform: rotate(-45deg)!important;
+				-webkit-transform: rotate(-45deg)!important;
+			};
+		}
+	}
+	/* end of header (nav) */
+
+	#top-video {
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		max-width: 100%;
+		max-height: 100%;
+		left: 0;
+		top: 0;
+		bottom: 0;
+
+	
+		#home-video {
+			background: transparent;
+			position: absolute;
+			padding: 0 !important;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			overflow: hidden;
+			z-index: -100;
+			width: 100%; 			
+			height: 100vh;
+			max-height: 100%;
+			video {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				min-width: 100%;
+				min-height: 100%;
+				width: auto;
+				height: auto;
+				z-index: -100;
+				transform: translateX(-50%) translateY(-50%);
+			}
+		}
+		
+		#tagline {
+			font: 4.5em bold;
+			font-family: "SabonLTStd_Italic";
+			position: absolute;
+			color: white;
+			left: 60px;
+			bottom: 100px;
+			span {
+				text-decoration: underline;
+			}
+		}
+		
+		#down-arrow {
+			span {
+				color: white;
+				font-size: 3em;
+				position: absolute;
+				left: 48%;
+				top: 93%;
+				transition: font-size 0.5s;
+				&:hover {
+					font-size: 3.5em;
+				}
+			}
+		}
+	}
+	
+	/*Drop Down Page*/
+	#dropDownPage {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 3;
+		left: 0;
+		top: 0;
+		background: url("../images/dropdown.jpg") center center no-repeat;
+		background-attachment: cover;
+		display: none; 
+		overflow-y: auto;
+		#menu-inner {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			width: 95%;
+			nav {
+				/* margin-top: 180px; */
+				padding: 28.5714px 0;
+				ul {
+					width: 95%;
+					margin: 0 auto;
+					text-align: center;
+					li {
+						display: inline-block;
+						padding: 0 12px;
+						&:first-child, &:last-child {
+							font-family: "Lobster";
+						}
+						a {
+							font-size: 48px;
+							font-weight: bold;
+							color: white;
+							text-shadow: .5px .5px grey;
+							word-break: keep-all;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+		#social-links {
+			position: absolute;
+			left: 50%;
+			top: 65%;
+			transform: translate(-50%, -35%);
+			-o-transform: translate(-50%, -35%);
+			-ms-transform: translate(-50%, -35%);
+			-moz-transform: translate(-50%, -35%);
+			-webkit-transform: translate(-50%, -35%);
+			width: 95%;
+			ul {
+				width: 99%;
+				padding: 0;
+				margin: 0 auto;
+				text-align: center;
+				margin-top: 20px;
+				li {
+					display: inline-block;
+					margin: 0 12px;
+					a {
+						img {
+							width: 27px;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* who we are */
+	#who-we-are {		
+		width: 100vw;
+		display: block;		
+		max-width: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/We1.jpg") no-repeat center center;
+		background-size: cover;
+		.container {
+			padding-top: 142.857px;
+			padding-bottom: 157.143px;
+			color: white;
+			width: 70%;
+			h1 {
+				font-size: 3em;
+				margin-bottom: 40px;
+				font-family: "SabonLTStd_Italic";
+				font-weight: bold;
+			}
+			p {
+				font-size: 1.3em;
+				font-family: "Roboto";
+				letter-spacing: 0.2rem;
+				font-weight: bold;
+				line-height: 150%;
+			}
+		}
+	}
+	
+	/* information */
+	
+	#information {	
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		max-width: 100%;
+		.container-fluid {
+			padding: 0 !important;
+			.row {
+				height: 50vh;
+				width: 100vw;
+				max-width: 100%;
+				margin: 0 !important;
+				.col-xs-12 {
+					height: 100%;
+					color: white; 
+					font-size: 3em;
+					padding: 0 !important;
+					font-family: "Bad Script";
+					font-weight: 900;
+					a {
+						color: white;
+					}
+					&:first-child {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Branding.jpg") no-repeat center center;
+						background-size: cover;
+						font-family: "Roboto";
+					}
+					&:nth-child(2) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Motion.jpg") no-repeat center center;
+						background-size: cover;
+					}
+					&:nth-child(3) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Corporate.jpg") no-repeat center center;
+						background-size: cover;
+					}
+					&:nth-child(4) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/LiveAction.jpg") no-repeat center center;
+						background-size: cover;
+						font-family: "Roboto";
+						float: right;
+					}
+					&:last-child {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Here.jpg") no-repeat center center;
+						background-size: cover;						
+					}
+					.info-content {
+						position: relative;
+						width: 100%; 
+						height: 100%;
+						&:hover {
+							background-color: rgba(0, 0, 0, 0.5);
+							cursor: pointer;
+							p:after {
+								width: 100%;
+								border-bottom: 2px solid white;
+							}
+						}
+						p {
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+							-o-transform: translate(-50%, -50%);
+							-moz-transform: translate(-50%, -50%);
+							-webkit-transform: translate(-50%, -50%);
+							&:after {
+								content: "";
+								position: absolute;
+								width: 0;
+								height: 1px;
+								left: 0;
+								bottom: 0;
+								border-bottom: 0px solid white;
+								transition: border-bottom .3s, width .3s;
+								-o-transition: border-bottom .3s, width .3s;
+								-moz-transition: border-bottom .3s, width .3s;
+								-webkit-transition: border-bottom .3s, width .3s;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* Our Clients */
+	#our-clients {
+		display: block;
+		width: 100%;
+		background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Motion.jpg") no-repeat center center;
+		background-size: cover;	
+		#our-clients-wrapper {
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			.container {
+				padding: 200px 15px 200px 0px;
+				color: white;
+				width: 95%;				
+				.row {
+					padding: 0 !important;
+					h1 {
+						font-size: 3.5em;
+						margin-left: 13%;
+						margin-bottom: 40px;
+						font-family: "Lobster";
+						span {
+							text-decoration: underline;
+						}
+					}
+				}
+				.brand-img-wrapper {
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+	#where-we-live {
+		width: 100vw;
+		max-width: 100%;
+		min-height: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/Where1.jpg") no-repeat center center;
+		background-size: cover;
+		display: block;
+		.container {
+			padding: 128.571px 15px 128.571px 15px;
+			color: white;	
+			width: 90%;
+			h1 {
+				font-family: "Lobster";
+			}
+			P {
+				font-family: "Open Sans";
+				font-weight: bold;
+				letter-spacing: .1rem;
+				span {
+					color: grey;
+					&:hover {
+						text-decoration: underline;
+						cursor: pointer;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	
+	#to-be {
+		display: block;
+		width: 100vw;
+		max-width: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/ToBe1.jpg") no-repeat center center;
+		background-size: cover;
+		color: white;
+		.container {
+			.row {
+				margin: 0 !important;
+				padding: 128.571px 0 128.571px 0px;
+				h1 {
+					font-family: "Lobster";
+					font-size: 3.5em;					
+				}
+				h2 {
+					padding-left: 65px;
+					font-size: 2em;
+					font-weight: bold;
+					margin-bottom: 10px;
+				}
+				p {
+					padding-left: 65px;
+					font-size: 1em;
+					font-weight: bold;
+					letter-spacing: .1rem;
+					word-break: keep-all;
+					span {
+						&:hover {
+							text-decoration: underline;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* Back to top */
+	#back-top {
+		color: white;
+		position: fixed;
+		right: 50px;
+		bottom: 50px;
+		font-size: 2em;
+		transition: font-size 0.3s;
+		&:hover {
+			font-size: 2.5em;
+			cursor: pointer;
+		}
+	}
+	
+	/* Production video */
+	.production-vdo {
+		height: 0;
+		padding-top: 25px;
+		padding-bottom: 54%;
+		margin-bottom: 10px;
+		position: relative;
+		overflow: hidden;
+		iframe {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+	}
+	
+	.vdo-description {
+		width: 100%;
+		background: black;
+		color: white;
+		padding: 50px 0 45px 0;
+		margin-top: -30px;
+		h1 {
+			border-bottom: 2px solid white;
+			font-family: "SabonLTStd_Italic";
+			display: inline;
+			font-weight: 700;
+			font-size: 33px;
+			line-height: 45px;
+		}
+		h2 {
+			font-size: 2em;
+			padding-bottom: 10px;
+			line-height: 34px;
+		}
+		p {
+			width: 90%;
+			margin: 0 auto;
+			letter-spacing: 0.15rem;
+			font-size: 1.15em;
+		}
+	}
+	
+	.sub-vdo {
+		background: black;
+		.container-fluid {
+			padding: 0;
+			.rows {
+				.col-xs-12 {
+					padding-left: 0;
+					padding-right: 0;
+					height: auto;
+					padding-top: 25px;
+					padding-bottom: 55%;
+					margin-bottom: 10px;
+					position: relative;
+					overflow: hidden;
+					iframe {
+						top: -10%;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+	
+	.vdo-screenshots {
+		.container-fluid {
+			padding: 0 !important;
+			.rows {
+				.col-xs-12 {
+					padding: 0 !important;
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+	footer {
+		color: white;
+		margin-top: -10px;
+		.container-fluid {
+			background: black;
+			.client-name {
+				.col-xs-12 {
+					padding-top: 40px;
+					p {
+						font-size: 1.3em;
+						font-family: "SabonLTStd_Italic";
+						letter-spacing: 1px;
+					}
+				}
+			}
+			
+			.site-links {
+				.col-xs-12 {
+					padding-top: 60px;
+					font-family: "SabonLTStd_Italic";
+					letter-spacing: 0.1rem;
+					&:not(:nth-child(2)) {
+						font-family: "Roboto";
+						font-weight: 700;
+					}
+					p {
+						font-size: 16px;
+						line-height: 18px;
+						padding-bottom: 1%;						
+						&:nth-child(2) {
+							font-family: "SabonLTStd_Italic";
+						}
+						a {
+							color: white;
+							border-bottom: 2px solid white;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			
+			.footer-social-links {
+				.col-xs-12 {
+					padding-top: 96px;
+					padding-bottom: 96px;
+					p {}
+					div {
+						a {
+							color: white;
+							transition: color .5s;
+							&:first-child:hover {color: #1573dd;}
+							&:nth-child(2):hover {color: #0084b4;}
+							&:last-child:hover {color: red;}
+							i {
+								padding-left: 1%;
+								padding-right: 1%;			
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	/* end of production videos*/
+	
+	/* Categories' pages */
+	.cat-wrapper {
+		background: black;
+		height: 100vh;
+		.container-fluid {
+			padding: 0 !important;
+			.rows {
+				.cat-vdo-wrapper {
+					padding: 0 !important;
+					&:hover {
+						img {
+							z-index: -1;
+						}
+						.vdo-hover-text {
+							z-index: 1;
+							background: rgba(0, 0, 0, 0.6);
+						}
+					}
+					img {}
+					a {
+						.vdo-hover-text {
+							position: absolute;
+							color: white;
+							width: 100%;
+							height: 100%;
+							left: 0;
+							top: 0;
+							background: transparent;
+							transition: background 2s;
+							-o-transition: background 2s;
+							-ms-transition: background 2s;
+							-moz-transition: background 2s;
+							-webkit-transition: background 2s;
+							z-index: -1;
+							.vdo-hover-text-inner {
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								-o-transform: translate(-50%, -50%);
+								-ms-transform: translate(-50%, -50%);
+								-moz-transform: translate(-50%, -50%);
+								-webkit-transform: translate(-50%, -50%);
+								h4 {
+									font-family: "Roboto";
+									font-size: 1.5em;
+									font-weight: bold;
+									border-bottom: 2px solid white;
+								}
+								h5 {
+									font-family: "Lobster";
+									font-size: .8em;
+								}
+							}
+						
+						}
+					}					
+				}
+			}
+		}
+	}
+	/* End of Categories' pages (768-992)*/
+}
+
+
+// styles for xs
+
+@media screen and (min-width: 568px) and (max-width: 767px) {
+
+	/* beginning of header (nav) */
+	.navbar-header {
+		margin-left: 3% !important;
+		margin-top: -5px;
+		position: fixed;
+		span {
+			width: 60px;
+			height: 60px;				
+			a {
+				color: white;
+				font-size: 3em;	
+				position: relative;
+				overflow: visible; 
+				margin-top: 45px;
+				opacity: 1;
+				transition: opacity 0.5s;
+				-o-transition: opacity 0.5s;
+				-moz-transition: opacity 0.5s;
+				-webkit-transition: opacity 0.5s;
+				&:hover {
+					opacity: 0.5;
+				}
+				&:before {
+					content: "";
+					background: url("../images/hexagon.png") no-repeat;
+					background-size: 100% 100%;
+					position: absolute;
+					left: -10px;
+					top: -15px;
+					width: 80px;
+					height: 80px;
+					transform: rotate(30deg);
+					-o-transform: rotate(30deg);
+					-moz-transform: rotate(30deg);
+					-webkit-transform: rotate(30deg);
+				}
+			}
+		}
+	}
+	.navbar-right {
+		right: 2%;
+		margin-top: 60px !important;
+		width: 60px;
+		height: 80px;
+		margin-right: 0 !important;
+		position: fixed;
+			&:hover {
+			cursor: pointer;
+			#menu-btn {
+				&:before {
+					transform: translateY(450%);
+				}
+				&:after {
+					transform: translateY(-450%);
+				}
+			}
+		}
+		#menu-btn {
+			width: 24px;
+			height: 2px;
+			background: white;
+			position: absolute;				
+			&:before {
+				content: "";
+				width: 24px;
+				height: 2px;
+				background: white;
+				position: absolute;
+				transform: translateY(300%);
+				-o-transform: translateY(300%);
+				-ms-transform: translateY(300%);
+				-moz-box-sizing-transform: translateY(300%);
+				-webkit-transform: translateY(300%);
+				transition: transform .3s;
+				-o-transition: transform .3s;
+				-ms-transition: transform .3s;
+				-moz-transition: transform .3s;
+				-webkit-transition: transform .3s;					
+			}
+			&:after {
+				content: "";
+				width: 24px;
+				height: 2px;
+				background: white;
+				position: absolute;
+				transform: translateY(-300%);
+				-o-transform: translateY(-300%);
+				-ms-transform: translateY(-300%);
+				-moz-box-sizing-transform: translateY(-300%);
+				-webkit-transform: translateY(-300%);
+				transition: transform .3s;
+				-o-transition: transform .3s;
+				-ms-transition: transform .3s;
+				-moz-transition: transform .3s;
+				-webkit-transition: transform .3s;
+			}
+		}
+		.closePage {
+			background: transparent !important;
+			&:before {
+				transform: rotate(45deg)!important;
+				-o-transform: rotate(45deg)!important;
+				-ms-transform: rotate(45deg)!important;
+				-moz-transform: rotate(45deg)!important;
+				-webkit-transform: rotate(45deg)!important;
+			};
+			&:after {
+				transform: rotate(-45deg)!important;
+				-o-transform: rotate(-45deg)!important;
+				-ms-transform: rotate(-45deg)!important;
+				-moz-transform: rotate(-45deg)!important;
+				-webkit-transform: rotate(-45deg)!important;
+			};
+		}
+	}
+	/* end of header (nav) */
+
+	#top-video {
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		max-width: 100%;	
+		left: 0;
+		top: 0;
+		bottom: 0;
+
+	
+		#home-video {
+			background: transparent;
+			position: absolute;
+			padding: 0 !important;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			overflow: hidden;
+			z-index: -100;
+			width: 100%; 
+			height: 100vh;
+			max-height: 100%;
+			video {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				min-width: 100%;
+				min-height: 100%;
+				width: auto;
+				height: auto;
+				z-index: -100;
+				transform: translateX(-50%) translateY(-50%);
+			}
+		}
+		
+		#tagline {
+			font: 2.5em bold;
+			font-family: "SabonLTStd_Italic";
+			position: absolute;
+			color: white;
+			left: 5%;
+			bottom: 100px;
+			span {
+				text-decoration: underline;
+			}
+		}
+		
+		#down-arrow {
+			span {
+				color: white;
+				font-size: 3em;
+				position: absolute;
+				left: 48%;
+				top: 93%;
+				transition: font-size 0.5s;
+				&:hover {
+					font-size: 3.5em;
+				}
+			}
+		}
+	}
+
+	/*Drop Down Page*/
+	#dropDownPage {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 3;
+		left: 0;
+		top: 0;
+		background: url("../images/dropdown.jpg") center center no-repeat;
+		background-attachment: cover;
+		display: none; 
+		overflow-y: auto;
+		#menu-inner {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			width: 95%;
+			nav {
+				/* margin-top: 180px; */
+				padding: 28.5714px 0;
+				ul {
+					width: 90%;
+					margin: 0 auto;
+					text-align: center;
+					li {
+						display: block;
+						padding: 0 12px;
+						&:first-child, &:last-child {
+							font-family: "Lobster";
+						}
+						a {
+							font-size: 2.8em;
+							font-weight: bold;
+							color: white;
+							text-shadow: .5px .5px grey;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+		#social-links {
+			position: absolute;
+			left: 50%;
+			top: 80%;
+			transform: translate(-50%, -20%);
+			-o-transform: translate(-50%, -20%);
+			-ms-transform: translate(-50%, -20%);
+			-moz-transform: translate(-50%, -20%);
+			-webkit-transform: translate(-50%, -20%);
+			width: 95%;
+			ul {
+				width: 99%;
+				padding: 0;
+				margin: 0 auto;
+				text-align: center;				
+				li {
+					display: inline-block;
+					margin: 0 12px;
+					a {
+						img {
+							width: 27px;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* who we are */
+	#who-we-are {		
+		width: 100vw;
+		padding-top: 111.111px; 
+		padding-bottom: 122.222px;
+		display: block;		
+		max-width: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/We1.jpg") no-repeat center center;
+		background-size: cover;
+		
+		.container {
+			padding-top: 0px;
+			padding-bottom: 137.5px;
+			color: white;
+			width: 90%;
+			h1 {
+				font-size: 3em;
+				margin-bottom: 40px;
+				font-family: "SabonLTStd_Italic";
+				font-weight: bold;
+			}
+			p {
+				font-size: 1.1em;
+				font-family: "Roboto";
+				letter-spacing: 0.1rem;
+				font-weight: bold;
+				line-height: 180%;
+			}
+		}
+	}
+	
+	/* information */
+	
+	#information {	
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		max-width: 100%;
+		.container-fluid {
+			padding: 0 !important;
+			.row {
+				height: 50vh;
+				width: 100vw;
+				max-width: 100%;
+				margin: 0 !important;
+				.col-xs-12 {
+					height: 100%;
+					color: white; 
+					font-size: 3em;
+					padding: 0 !important;
+					font-family: "Bad Script";
+					font-weight: 900;
+					a {
+						color: white;
+					}
+					&:first-child {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Branding.jpg") no-repeat center center;
+						background-size: cover;
+						font-family: "Roboto";
+					}
+					&:nth-child(2) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Motion.jpg") no-repeat center center;
+						background-size: cover;
+					}
+					&:nth-child(3) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Corporate.jpg") no-repeat center center;
+						background-size: cover;
+					}
+					&:nth-child(4) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/LiveAction.jpg") no-repeat center center;
+						background-size: cover;
+						font-family: "Roboto";
+						float: right;
+					}
+					&:last-child {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Here.jpg") no-repeat center center;
+						background-size: cover;						
+					}
+					.info-content {
+						position: relative;
+						width: 100%; 
+						height: 100%;
+						&:hover {
+							background-color: rgba(0, 0, 0, 0.5);
+							cursor: pointer;
+							p:after {
+								width: 100%;
+								border-bottom: 2px solid white;
+							}
+						}
+						p {
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+							-o-transform: translate(-50%, -50%);
+							-moz-transform: translate(-50%, -50%);
+							-webkit-transform: translate(-50%, -50%);
+							&:after {
+								content: "";
+								position: absolute;
+								width: 0;
+								height: 1px;
+								left: 0;
+								bottom: 0;
+								border-bottom: 0px solid white;
+								transition: border-bottom .3s, width .3s;
+								-o-transition: border-bottom .3s, width .3s;
+								-moz-transition: border-bottom .3s, width .3s;
+								-webkit-transition: border-bottom .3s, width .3s;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* Our Clients */
+	#our-clients {
+		display: block;
+		width: 100%;
+		background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Motion.jpg") no-repeat center center;
+		background-size: cover;	
+		#our-clients-wrapper {
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			.container {
+				padding: 200px 15px 100px 0px;
+				color: white;
+				width: 95%;				
+				.row {
+					padding: 0 !important;
+					h1 {
+						font-size: 2.5em;
+						margin-left: 8%;
+						margin-bottom: 40px;
+						font-family: "Lobster";
+						padding-top: 20%;
+						span {
+							text-decoration: underline;
+						}
+					}
+				}
+				.brand-img-wrapper {
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+	#where-we-live {
+		max-width: 100%;
+		max-height: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/Where1.jpg") no-repeat center center;
+		background-size: cover;
+		display: block;
+		.container {
+			padding: 128.571px 15px 128.571px 5%;
+			color: white;	
+			h1 {
+				font-family: "Lobster";
+			}
+			P {
+				font-family: "Open Sans";
+				font-weight: bold;
+				letter-spacing: .1rem;
+				font-size: .8em;
+				span {
+					color: grey;
+					&:hover {
+						text-decoration: underline;
+						cursor: pointer;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	/* to be */
+	#to-be {
+		display: block;
+		width: 100vw;
+		max-width: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/ToBe1.jpg") no-repeat center center;
+		background-size: cover;
+		color: white;
+		.container {
+			.row {
+				margin: 0 !important;
+				padding: 112.5px 1% 112.5px 2%;
+				h1 {
+					font-family: "Lobster";
+					font-size: 2em;
+				}
+				h2 {
+					padding-left: 10%;
+					font-size: 1.8em;
+					font-weight: bold;
+				}
+				p {
+					padding-left: 10%;
+					font-size: .8em;
+					font-weight: bold;
+					letter-spacing: 0.1rem;
+					line-height: 150%;
+					word-break: keep-all;
+					span {
+						&:hover {
+							text-decoration: underline;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* Back to top */
+	#back-top {
+		color: white;
+		position: fixed;
+		right: 30px;
+		bottom: 30px;
+		font-size: 2em;
+		transition: font-size 0.3s;
+		&:hover {
+			font-size: 2.5em;
+			cursor: pointer;
+		}
+	}
+	
+	/* Production video */
+	.production-vdo {
+		height: 0;
+		padding-top: 25px;
+		padding-bottom: 52%;
+		margin-bottom: 10px;
+		position: relative;
+		overflow: hidden;
+		iframe {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+	}
+	
+	.vdo-description {
+		width: 100%;
+		background: black;
+		color: white;
+		padding: 40px 0 35px 0;
+		margin-top: -30px;
+		h1 {
+			border-bottom: 2px solid white;
+			font-family: "SabonLTStd_Italic";
+			display: inline;
+			font-weight: 700;
+			font-size: 1.8em;
+			line-height: 36px;
+		}
+		h2 {
+			font-size: 1.4em;
+			padding-bottom: 10px;
+			line-height: 30px;
+			margin-top: 10px !important;
+			font-weight: 700;
+		}
+		p {
+			width: 90%;
+			margin: 0 auto;
+			letter-spacing: 0.2rem;
+			font-size: 1em;
+		}
+	}
+	
+	.sub-vdo {
+		background: black;
+		.container-fluid {
+			padding: 0;
+			.rows {
+				.col-xs-12 {
+					padding-left: 0;
+					padding-right: 0;
+					height: auto;
+					padding-top: 25px;
+					padding-bottom: 55%;
+					margin-bottom: 10px;
+					position: relative;
+					overflow: hidden;
+					iframe {
+						top: -10%;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+	
+	.vdo-screenshots {
+		.container-fluid {
+			padding: 0 !important;
+			.rows {
+				.col-xs-12 {
+					padding: 0 !important;
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+	footer {
+		color: white;
+		margin-top: -10px;
+		.container-fluid {
+			background: black;
+			.client-name {
+				.col-xs-12 {
+					padding-top: 30px;
+					padding-bottom: 8%;
+					p {
+						font-size: 1em;
+						font-family: "SabonLTStd_Italic";
+						letter-spacing: 1px;
+					}
+				}
+			}
+			
+			.site-links {
+				.col-xs-12 {
+					padding-top: 0px;
+					font-family: "SabonLTStd_Italic";
+					letter-spacing: 0.1rem;
+					&:not(:nth-child(2)) {
+						font-family: "Roboto";
+						font-weight: 700;
+					}
+					p {
+						font-size: .85em;
+						line-height: 18px;
+						padding-bottom: .5%;						
+						&:nth-child(2) {
+							font-family: "SabonLTStd_Italic";
+						}
+						a {
+							color: white;
+							border-bottom: 2px solid white;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			
+			.footer-social-links {
+				.col-xs-12 {
+					padding-top: 30px;
+					padding-bottom: 96px;
+					p {
+						font-size: .9em;
+					}
+					div {
+						a {
+							color: white;
+							transition: color .5s;
+							&:first-child:hover {color: #1573dd;}
+							&:nth-child(2):hover {color: #0084b4;}
+							&:last-child:hover {color: red;}
+							i {
+								padding-left: 1%;
+								padding-right: 1%;			
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	/* end of production videos*/
+	
+	/* Categories' pages */
+	.cat-wrapper {
+		background: black;
+		height: 100%;
+		.container-fluid {
+			padding: 0 !important;
+			.rows {
+				.cat-vdo-wrapper {
+					padding: 0 !important;
+					&:hover {
+						img {
+							z-index: -1;
+						}
+						.vdo-hover-text {
+							z-index: 1;
+							background: rgba(0, 0, 0, 0.6);
+						}
+					}
+					img {}
+					a {
+						.vdo-hover-text {
+							position: absolute;
+							color: white;
+							width: 100%;
+							height: 100%;
+							left: 0;
+							top: 0;
+							background: transparent;
+							transition: background 2s;
+							-o-transition: background 2s;
+							-ms-transition: background 2s;
+							-moz-transition: background 2s;
+							-webkit-transition: background 2s;
+							z-index: -1;
+							.vdo-hover-text-inner {
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								-o-transform: translate(-50%, -50%);
+								-ms-transform: translate(-50%, -50%);
+								-moz-transform: translate(-50%, -50%);
+								-webkit-transform: translate(-50%, -50%);
+								h4 {
+									font-family: "Roboto";
+									font-size: 3em;
+									font-weight: bold;
+									border-bottom: 2px solid white;
+								}
+								h5 {
+									font-family: "Lobster";
+									font-size: 1.8em;
+								}
+							}
+						
+						}
+					}					
+				}
+			}
+		}
+	}
+	/* End of Categories' pages (568-767)*/
+}
+
+/* styles for super small (less than 567px)*/
+
+@media screen and (max-width: 567px) {
+
+	/* beginning of header (nav) */
+	.navbar-header {
+		margin-left: 5%;
+		margin-top: -5px;
+		position: fixed;
+		left: 5%;
+		span {
+			width: 60px;
+			height: 60px;				
+			a {
+				color: white;
+				font-size: 3em;	
+				position: relative;
+				overflow: visible; 
+				margin-top: 45px;
+				opacity: 1;
+				transition: opacity 0.5s;
+				-o-transition: opacity 0.5s;
+				-moz-transition: opacity 0.5s;
+				-webkit-transition: opacity 0.5s;
+				&:hover {
+					opacity: 0.5;
+				}
+				&:before {
+					content: "";
+					background: url("../images/hexagon.png") no-repeat;
+					background-size: 100% 100%;
+					position: absolute;
+					left: 0px;
+					top: -5px;
+					width: 60px;
+					height: 60px;
+					transform: rotate(30deg);
+					-o-transform: rotate(30deg);
+					-moz-transform: rotate(30deg);
+					-webkit-transform: rotate(30deg);
+				}
+			}
+		}
+	}
+	.navbar-right {
+		margin-right: 3% !important;
+		margin-left: 0px;
+		position: fixed;
+		right: 0;
+		padding-top: 60px;
+		width: 25px;
+		height: 80px;
+		&:hover {
+			cursor: pointer;
+			#menu-btn {
+				&:before {
+					transform: translateY(450%);
+				}
+				&:after {
+					transform: translateY(-450%);
+				}
+			}
+		}
+		#menu-btn {
+			width: 24px;
+			height: 2px;
+			background: white;
+			position: absolute;				
+			&:before {
+				content: "";
+				width: 24px;
+				height: 2px;
+				background: white;
+				position: absolute;
+				transform: translateY(300%);
+				-o-transform: translateY(300%);
+				-ms-transform: translateY(300%);
+				-moz-box-sizing-transform: translateY(300%);
+				-webkit-transform: translateY(300%);
+				transition: transform .3s;
+				-o-transition: transform .3s;
+				-ms-transition: transform .3s;
+				-moz-transition: transform .3s;
+				-webkit-transition: transform .3s;					
+			}
+			&:after {
+				content: "";
+				width: 24px;
+				height: 2px;
+				background: white;
+				position: absolute;
+				transform: translateY(-300%);
+				-o-transform: translateY(-300%);
+				-ms-transform: translateY(-300%);
+				-moz-box-sizing-transform: translateY(-300%);
+				-webkit-transform: translateY(-300%);
+				transition: transform .3s;
+				-o-transition: transform .3s;
+				-ms-transition: transform .3s;
+				-moz-transition: transform .3s;
+				-webkit-transition: transform .3s;
+			}
+		}
+		.closePage {
+			background: transparent !important;
+			&:before {
+				transform: rotate(45deg)!important;
+				-o-transform: rotate(45deg)!important;
+				-ms-transform: rotate(45deg)!important;
+				-moz-transform: rotate(45deg)!important;
+				-webkit-transform: rotate(45deg)!important;
+			};
+			&:after {
+				transform: rotate(-45deg)!important;
+				-o-transform: rotate(-45deg)!important;
+				-ms-transform: rotate(-45deg)!important;
+				-moz-transform: rotate(-45deg)!important;
+				-webkit-transform: rotate(-45deg)!important;
+			};
+		}
+	}
+	/* end of header (nav) */
+
+	#top-video {
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		max-width: 100%;	
+		left: 0;
+		top: 0;
+		bottom: 0;
+
+	
+		#home-video {
+			background: transparent;
+			position: absolute;
+			padding: 0 !important;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			overflow: hidden;
+			z-index: -100;
+			width: 100%; 
+			height: 100vh;
+			max-height: 100%;
+			video {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				min-width: 100%;
+				min-height: 100%;
+				width: auto;
+				height: auto;
+				z-index: -100;
+				transform: translateX(-50%) translateY(-50%);
+			}
+		}
+		
+		#tagline {
+			font: 1.5em bold;
+			font-family: "SabonLTStd_Italic";
+			position: absolute;
+			color: white;
+			left: 5%;
+			bottom: 100px;
+			span {
+				text-decoration: underline;
+			}
+		}
+		
+		#down-arrow {
+			span {
+				color: white;
+				font-size: 3em;
+				position: absolute;
+				left: 48%;
+				top: 93%;
+				transition: font-size 0.5s;
+				&:hover {
+					font-size: 3.5em;
+				}
+			}
+		}
+	}
+	
+	/*Drop Down Page*/
+	#dropDownPage {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 3;
+		left: 0;
+		top: 0;
+		background: url("../images/dropdown.jpg") center center no-repeat;
+		background-attachment: cover;
+		display: none; 
+		overflow-y: auto;
+		#menu-inner {
+			position: absolute;
+			left: 50%;
+			top: 40%;
+			transform: translate(-50%, -60%);
+			-o-transform: translate(-50%, -60%);
+			-ms-transform: translate(-50%, -60%%);
+			-moz-transform: translate(-50%, -60%);
+			-webkit-transform: translate(-50%, -60%);
+			width: 95%;
+			nav {
+				margin-top: 120px;
+				padding: 28.5714px 0;
+				ul {
+					width: 90%;
+					margin: 0 auto;
+					text-align: center;
+					li {
+						display: block;
+						padding: 0 12px;
+						&:first-child, &:last-child {
+							font-family: "Lobster";
+						}
+						a {
+							font-size: 2.8em;
+							font-weight: bold;
+							color: white;
+							text-shadow: .5px .5px grey;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+		#social-links {
+			position: absolute;
+			left: 50%;
+			top: 80%;
+			transform: translate(-50%, -20%);
+			-o-transform: translate(-50%, -20%);
+			-ms-transform: translate(-50%, -20%);
+			-moz-transform: translate(-50%, -20%);
+			-webkit-transform: translate(-50%, -20%);
+			width: 95%;
+			ul {
+				width: 99%;
+				padding: 0;
+				margin: 0 auto;
+				text-align: center;
+				margin-top: 20px;
+				li {
+					display: inline-block;
+					margin: 0 12px;
+					a {
+						img {
+							width: 27px;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* who we are */
+	#who-we-are {		
+		width: 100vw;
+		padding-top: 111.111px; 
+		padding-bottom: 122.222px;
+		display: block;		
+		max-width: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/We1.jpg") no-repeat center center;
+		background-size: cover;
+		
+		.container {
+			padding: 0 0 100px 0;
+			color: white;
+			width: 95%;
+			margin: 0 auto;
+			word-break: keep-all;
+			.row {
+				margin: 0;
+				h1 {
+					font-size: 2em;
+					margin-bottom: 40px;
+					font-family: "SabonLTStd_Italic";
+					font-weight: bold;
+				}
+				p {
+					font-size: 1.1em;
+					font-family: "Roboto";
+					letter-spacing: 0.1rem;
+					font-weight: bold;
+					line-height: 180%;
+					word-break: break-all;
+				}
+			}
+		}
+	}
+	
+	/* information */
+	
+	#information {	
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		max-width: 100%;
+		.container-fluid {
+			padding: 0 !important;
+			.row {
+				height: 50vh;
+				width: 100vw;
+				max-width: 100%;
+				margin: 0 !important;
+				.col-xs-12 {
+					height: 100%;
+					color: white; 
+					font-size: 2em;
+					padding: 0 !important;
+					font-family: "Bad Script";
+					font-weight: 900;
+					a {
+						color: white;
+					}
+					&:first-child {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Branding.jpg") no-repeat center center;
+						background-size: cover;
+						font-family: "Roboto";
+					}
+					&:nth-child(2) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Motion.jpg") no-repeat center center;
+						background-size: cover;
+					}
+					&:nth-child(3) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Corporate.jpg") no-repeat center center;
+						background-size: cover;
+					}
+					&:nth-child(4) {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/LiveAction.jpg") no-repeat center center;
+						background-size: cover;
+						font-family: "Roboto";
+						float: right;
+					}
+					&:last-child {
+						background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Here.jpg") no-repeat center center;
+						background-size: cover;						
+					}
+					.info-content {
+						position: relative;
+						width: 100%; 
+						height: 100%;
+						&:hover {
+							background-color: rgba(0, 0, 0, 0.5);
+							cursor: pointer;
+							p:after {
+								width: 100%;
+								border-bottom: 2px solid white;
+							}
+						}
+						p {
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+							-o-transform: translate(-50%, -50%);
+							-moz-transform: translate(-50%, -50%);
+							-webkit-transform: translate(-50%, -50%);
+							&:after {
+								content: "";
+								position: absolute;
+								width: 0;
+								height: 1px;
+								left: 0;
+								bottom: 0;
+								border-bottom: 0px solid white;
+								transition: border-bottom .3s, width .3s;
+								-o-transition: border-bottom .3s, width .3s;
+								-moz-transition: border-bottom .3s, width .3s;
+								-webkit-transition: border-bottom .3s, width .3s;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* Our Clients */
+	#our-clients {
+		display: block;
+		width: 100%;
+		background: url("http://www.carbon.tv/wp-content/themes/semplice-child/images/Motion.jpg") no-repeat center center;
+		background-size: cover;	
+		#our-clients-wrapper {
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			.container {
+				padding: 200px 15px 100px 0px;
+				color: white;
+				width: 95%;				
+				.row {
+					padding: 0 !important;
+					h1 {
+						font-size: 2.5em;
+						margin-left: 8%;
+						margin-bottom: 40px;
+						font-family: "Lobster";
+						padding-top: 20%;
+						span {
+							text-decoration: underline;
+						}
+					}
+				}
+				.brand-img-wrapper {
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+	#where-we-live {
+		max-width: 100%;
+		max-height: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/Where1.jpg") no-repeat center center;
+		background-size: cover;
+		display: block;
+		.container {
+			padding: 128.571px 1% 128.571px 1%;
+			color: white;
+			h1 {
+				font-family: "Lobster";
+				padding-left: 15px;
+			}
+			.row {	
+				margin: 0;
+				h2 {
+					font-size: 1.5em;
+				}
+				P {
+					font-family: "Open Sans";
+					font-weight: bold;
+					letter-spacing: .1rem;
+					font-size: .8em;
+					word-break: break-all;
+					line-height: 180%;
+					span {
+						color: grey;
+						&:hover {
+							text-decoration: underline;
+							cursor: pointer;
+							color: white;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* to be */
+	#to-be {
+		display: block;
+		width: 100vw;
+		max-width: 100%;
+		background: url("http://www.carbon.tv/wp-content/uploads/2015/11/ToBe1.jpg") no-repeat center center;
+		background-size: cover;
+		color: white;
+		.container {
+			padding-left: 1%;
+			padding-right: 1%;
+			width: 95%;
+			.row {
+				margin: 0 !important;
+				padding: 112.5px 1% 112.5px 2%;
+				width: 100%;
+				.col-xs-12 {
+					padding: 0;
+					h1 {
+						font-family: "Lobster";
+						font-size: 2em;
+					}
+					h2 {
+						padding-left: 6%;
+						font-size: 1.3em;
+						font-weight: bold;
+					}
+					p {
+						padding-left: 6%;
+						font-size: .85em;
+						font-weight: bold;
+						letter-spacing: 0.15rem;
+						line-height: 180%;
+						word-break: keep-all;						
+						span {
+							&:hover {
+								text-decoration: underline;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* Back to top */
+	#back-top {
+		color: white;
+		position: fixed;
+		right: 30px;
+		bottom: 30px;
+		font-size: 2em;
+		transition: font-size 0.3s;
+		&:hover {
+			font-size: 2.5em;
+			cursor: pointer;
+		}
+	}
+	
+	/* Production video */
+	.production-vdo {
+		height: 0;
+		padding-top: 25px;
+		padding-bottom: 53%;
+		margin-bottom: 10px;
+		position: relative;
+		overflow: hidden;
+		iframe {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+	}
+	
+	.vdo-description {
+		width: 100%;
+		background: black;
+		color: white;
+		padding: 40px 0 35px 0;
+		margin-top: -30px;
+		h1 {
+			border-bottom: 2px solid white;
+			font-family: "SabonLTStd_Italic";
+			display: inline;
+			font-weight: 700;
+			font-size: 1.8em;
+			line-height: 36px;
+		}
+		h2 {
+			font-size: 1.4em;
+			padding-bottom: 10px;
+			line-height: 30px;
+			margin-top: 10px !important;
+			font-weight: 700;
+		}
+		p {
+			width: 90%;
+			margin: 0 auto;
+			letter-spacing: 0.15rem;
+			font-size: 1em;
+		}
+	}
+	
+	.sub-vdo {
+		background: black;
+		.container-fluid {
+			padding: 0;
+			.rows {
+				.col-xs-12 {
+					padding-left: 0;
+					padding-right: 0;
+					height: auto;
+					padding-top: 25px;
+					padding-bottom: 51%;
+					margin-bottom: 10px;
+					position: relative;
+					overflow: hidden;
+					iframe {
+						top: -10%;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+	
+	.vdo-screenshots {
+		.container-fluid {
+			padding: 0 !important;
+			.rows {
+				.col-xs-12 {
+					padding: 0 !important;
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+	footer {
+		color: white;
+		margin-top: -10px;
+		.container-fluid {
+			background: black;
+			.client-name {
+				.col-xs-12 {
+					padding-top: 30px;
+					padding-bottom: 8%;
+					p {
+						font-size: 1em;
+						font-family: "SabonLTStd_Italic";
+						letter-spacing: 1px;
+					}
+				}
+			}
+			
+			.site-links {
+				.col-xs-12 {
+					padding-top: 0px;
+					font-family: "SabonLTStd_Italic";
+					letter-spacing: 0.1rem;
+					&:not(:nth-child(2)) {
+						font-family: "Roboto";
+						font-weight: 700;
+					}
+					p {
+						font-size: .85em;
+						line-height: 18px;
+						padding-bottom: .5%;						
+						&:nth-child(2) {
+							font-family: "SabonLTStd_Italic";
+						}
+						a {
+							color: white;
+							border-bottom: 2px solid white;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			
+			.footer-social-links {
+				.col-xs-12 {
+					padding-top: 30px;
+					padding-bottom: 96px;
+					p {
+						font-size: .9em;
+					}
+					div {
+						a {
+							color: white;
+							transition: color .5s;
+							&:first-child:hover {color: #1573dd;}
+							&:nth-child(2):hover {color: #0084b4;}
+							&:last-child:hover {color: red;}
+							i {
+								padding-left: 1%;
+								padding-right: 1%;			
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	/* end of production videos*/
+	
+	/* Categories' pages */
+	.cat-wrapper {
+		background: black;
+		height: 100%;
+		.container-fluid {
+			padding: 0 !important;
+			.rows {
+				.cat-vdo-wrapper {
+					padding: 0 !important;
+					&:hover {
+						img {
+							z-index: -1;
+						}
+						.vdo-hover-text {
+							z-index: 1;
+							background: rgba(0, 0, 0, 0.6);
+						}
+					}
+					img {}
+					a {
+						.vdo-hover-text {
+							position: absolute;
+							color: white;
+							width: 100%;
+							height: 100%;
+							left: 0;
+							top: 0;
+							background: transparent;
+							transition: background 2s;
+							-o-transition: background 2s;
+							-ms-transition: background 2s;
+							-moz-transition: background 2s;
+							-webkit-transition: background 2s;
+							z-index: -1;
+							.vdo-hover-text-inner {
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								-o-transform: translate(-50%, -50%);
+								-ms-transform: translate(-50%, -50%);
+								-moz-transform: translate(-50%, -50%);
+								-webkit-transform: translate(-50%, -50%);
+								h4 {
+									font-family: "Roboto";
+									font-size: 3em;
+									font-weight: bold;
+									border-bottom: 2px solid white;
+								}
+								h5 {
+									font-family: "Lobster";
+									font-size: 1.8em;
+								}
+							}
+						
+						}
+					}					
+				}
+			}
+		}
+	}
+	/* End of Categories' pages (max: 567)*/
+}
